@@ -3,8 +3,9 @@
 <%@ page import="net.tanesha.recaptcha.ReCaptchaFactory" %>
 <html lang="tr">
 <head>
-    <meta charset="utf-8">
-    <title>jQuery UI Dialog - Modal form</title>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-9">
+    <META HTTP-EQUIV="Content-language" CONTENT="tr">
+    <title>sBalta - Spring MVC Demo</title>
     <script src="//code.jquery.com/jquery-1.9.0.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
