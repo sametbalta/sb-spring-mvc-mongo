@@ -1,11 +1,11 @@
-Samet Balta, Spring MVC, MongoDB, ExtJs demo.
+### Example Project Spring MVC, MongoDB, ExtJS, jQuery
 
 ## What you’ll need
 
-JDK 1.6 or later
-Maven 3.0+
-MongoDb (http://docs.mongodb.org/manual/installation/)
-Tomcat
+1. JDK 1.6 or later
+2. Maven 3.0+
+3. MongoDb (http://docs.mongodb.org/manual/installation/)
+4. Apache Tomcat 7
 
 ## Running Application
 
@@ -13,8 +13,10 @@ Tomcat
 2. cd sb-spring-mvc-mongo
 3. mvn compile
 4. mvn package
-5. deploy files to tomcat
+5. deploy project to tomcat server
 
-##Demo
+## Demo
 
-Test application at : http://localhost:{PORT}/sb-spring-mvc-mongo
+Test application on local server : http://localhost:{TOMCAT_PORT}/sb-spring-mvc-mongo
+
+Working Demo : http://vm-0.sbalta.kd.io:8080/sb-spring-mvc-mongo/
