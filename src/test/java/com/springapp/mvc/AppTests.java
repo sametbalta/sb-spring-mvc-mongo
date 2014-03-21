@@ -36,8 +36,5 @@ public class AppTests {
                 .andExpect(status().isOk())
                 .andExpect(view().name("panel"));
 
-        mockMvc.perform(get("/recaptcha"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("recaptcha"));
     }
 }

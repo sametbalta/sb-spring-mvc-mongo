@@ -41,6 +41,7 @@ public class UserController extends WebMvcConfigurerAdapter {
 
     /**
      * Create record
+     *
      * @param firstName
      * @param lastName
      * @param phone
@@ -49,17 +50,30 @@ public class UserController extends WebMvcConfigurerAdapter {
     @ResponseBody
     @RequestMapping(value = "/user/insert", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.OK)
-    public String doPost(@RequestParam(value = "firstName", required = true) String firstName,
+    public String doPost(ServletRequest request, Model model,
+                         @RequestParam(value = "firstName", required = true) String firstName,
                          @RequestParam(value = "lastName", required = true) String lastName,
                          @RequestParam(value = "phone", required = false) String phone) {
 
-        User user = new User(firstName, lastName, phone);
-        mongoOperation.save(user);
-        return gson.toJson(new Response(user, true, "Registired :)"));
+        String challenge = request.getParameter("recaptcha_challenge_field");
+        String response = request.getParameter("recaptcha_response_field");
+        String remoteAddr = request.getRemoteAddr();
+
+        ReCaptchaResponse reCaptchaResponse = reCaptchaService.checkAnswer(remoteAddr, challenge, response);
+
+        if(reCaptchaResponse.isValid()) {
+            User user = new User(firstName, lastName, phone);
+            mongoOperation.save(user);
+            return gson.toJson(new Response(user, true, "Registired :)"));
+        } else {
+            return "{\"success\":false, \"msg\":\"Invalid code. Try again :|\"}";
+        }
+
     }
 
     /**
      * Update record
+     *
      * @param id
      * @param firstName
      * @param lastName
@@ -90,6 +104,7 @@ public class UserController extends WebMvcConfigurerAdapter {
 
     /**
      * Delete record
+     *
      * @param id
      * @return
      */

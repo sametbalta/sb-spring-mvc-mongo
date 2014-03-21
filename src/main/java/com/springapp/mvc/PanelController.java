@@ -20,14 +20,4 @@ public class PanelController {
         return "panel";
     }
 
-    @RequestMapping(value = {"/recaptcha"}, method = RequestMethod.GET)
-    public String recaptcha() {
-        return "recaptcha";
-    }
-
-    @RequestMapping(value = {"/home"}, method = RequestMethod.GET)
-    public String home() {
-        return "home";
-    }
-
 }
