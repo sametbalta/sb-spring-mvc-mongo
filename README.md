@@ -1,4 +1,4 @@
-### Example Project Spring MVC, MongoDB, ExtJS, jQuery
+# Example Project Spring MVC, MongoDB, ExtJS, jQuery
 
 ## What you’ll need
 
