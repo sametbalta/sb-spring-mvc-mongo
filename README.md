@@ -17,6 +17,12 @@
 
 ## Demo
 
-Test application on local server : http://localhost:{TOMCAT_PORT}/sb-spring-mvc-mongo
+Test application on local server : [http://localhost:{TOMCAT_PORT}/sb-spring-mvc-mongo](http://localhost:8080/sb-spring-mvc-mongo)
 
-Working Demo : http://vm-0.sbalta.kd.io:8080/sb-spring-mvc-mongo/
+## References
+
+1. http://spring.io/docs, http://spring.io/guides
+2. [Integrate Free Anti-Bot Service reCAPTCHA with Spring MVC application By Abhijit Ghosh] (http://goo.gl/kJm2Og)
+3. [Mkyong.com Spring MongoDB Tutorials] (http://www.mkyong.com/mongodb/)
+4. [ExtJS Grid Doc.] (http://goo.gl/eUmmMd)
+5. [JQuery modal form example] (https://jqueryui.com/resources/demos/dialog/modal-form.html)
