@@ -7,6 +7,10 @@
 3. MongoDb (http://docs.mongodb.org/manual/installation/)
 4. Apache Tomcat 7
 
+## Configuration
+
+Assumes that there is no authentication for MongoDB "test" database.
+
 ## Running Application
 
 1. git clone https://github.com/sametbalta/sb-spring-mvc-mongo.git
